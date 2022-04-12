@@ -1,5 +1,5 @@
-#ifndef HUMANA_H
-# define HUMANA_H
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
 # include <iostream>
 # include "Weapon.hpp"
 
@@ -10,10 +10,10 @@ class HumanA{
 		Weapon		&_weaponREF;
 
 	public:
-		HumanA(std::string name, Weapon weapon);
+		HumanA(std::string name, Weapon &weapon);
 		~HumanA(void);
 
-		void attack(void);
+		void attack(void) const;
 };
 
 #endif

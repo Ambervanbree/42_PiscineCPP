@@ -3,7 +3,7 @@ CC		=	c++
 RM		=	rm -rf
 SRCS	=	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJS	=	$(SRCS:.cpp=.o)
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98 
 INCL	=	.
 
 all:	$(NAME)

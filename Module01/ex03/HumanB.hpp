@@ -1,6 +1,5 @@
-#ifndef HUMANB_H
-# define HUMANB_H
-# include <iostream>
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 # include "Weapon.hpp"
 
 class HumanB{
@@ -13,8 +12,8 @@ class HumanB{
 		HumanB(std::string name);
 		~HumanB(void);
 
-		void attack(void);
-		void setWeapon(Weapon weapon);
+		void attack(void) const;
+		void setWeapon(Weapon &weapon);
 };
 
 #endif

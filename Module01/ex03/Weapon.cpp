@@ -1,11 +1,11 @@
 #include "Weapon.hpp"
 
-Weapon::Weapon(std::string type) : _type(type = "bare hands"){
-	std::cout << "A weapon is created" << std::endl;
+Weapon::Weapon(std::string type) : _type(type){
+	std::cout << "Weapon " << this->_type << " has been created" << std::endl;
 }
 
 Weapon::~Weapon(void){
-	std::cout << "A weapon has been destroyed" << std::endl;
+	std::cout << "Weapon " << this->_type << " has been destroyed" << std::endl;
 }
 
 const std::string &Weapon::getType(void){
