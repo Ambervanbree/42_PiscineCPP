@@ -4,7 +4,7 @@ Weapon::Weapon(std::string type) : _type(type = "Default"){
 	std::cout << "A weapon is created" << std::endl;
 }
 
-Weapon::Weapon(void){
+Weapon::~Weapon(void){
 	std::cout << "A weapon has been destroyed" << std::endl;
 }
 
