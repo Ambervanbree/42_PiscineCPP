@@ -1,6 +1,6 @@
 #include "Weapon.hpp"
 
-Weapon::Weapon(std::string type) : _type(type = "Default"){
+Weapon::Weapon(std::string type) : _type(type = "bare hands"){
 	std::cout << "A weapon is created" << std::endl;
 }
 
