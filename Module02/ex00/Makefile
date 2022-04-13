@@ -5,15 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/04/13 10:31:27 by avan-bre          #+#    #+#              #
-#    Updated: 2022/04/13 10:31:28 by avan-bre         ###   ########.fr        #
+#    Created: 2022/04/13 10:31:51 by avan-bre          #+#    #+#              #
+#    Updated: 2022/04/13 18:24:29 by avan-bre         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	brain
+NAME	=	fixed
 CC		=	c++
 RM		=	rm -rf
-SRCS	=	main.cpp
+SRCS	=	main.cpp Fixed.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 INCL	=	.
