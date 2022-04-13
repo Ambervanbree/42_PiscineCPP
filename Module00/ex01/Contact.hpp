@@ -19,13 +19,11 @@ class Contact{
 		~Contact(void);
 
 		//accessors
-		void setIndex();
 		void setFirstName(std::string input);
 		void setLastName(std::string input);
 		void setNickName(std::string input);
 		void setPhoneNumber(std::string input);
 		void setDarkestSecret(std::string input);
-		int getIndex();
 		std::string getFirstName(void) const;
 		std::string getLastName(void) const;
 		std::string getNickName(void) const;
