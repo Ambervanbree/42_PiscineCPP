@@ -38,7 +38,7 @@ void Karen::_error(void) const{
 
 void Karen::complain(std::string level){
 	whatNow 	function[4] = {&Karen::_debug, &Karen::_info, &Karen::_warning, &Karen::_error};
-	std::string	triggers[4] = {"debug", "info", "warning", "error"};
+	std::string	triggers[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	for(int i = 0; i < 4; ++i){
 		if (!level.compare(triggers[i])){
 			std::cout << "She says: ";
