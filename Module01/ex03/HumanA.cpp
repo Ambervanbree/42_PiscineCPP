@@ -5,7 +5,7 @@ HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _weaponREF(weapo
 }
 
 HumanA::~HumanA(void){
-	std::cout << "HumanA was destroyed" << std::endl;
+	std::cout << "HumanA has left the building" << std::endl;
 }
 
 void HumanA::attack(void) const{
