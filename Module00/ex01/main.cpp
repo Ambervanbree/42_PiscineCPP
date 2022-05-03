@@ -11,23 +11,27 @@
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-#include "Contact.hpp"
 
 int	main(void)
 {
 	PhoneBook 	pb;
 	std::string	buffer;
+	int			stopper = 0;
 	while (1){
 		std::cout << ">> Enter your requested action (ADD/SEARCH/EXIT): " << std::endl;
 		getline(std::cin, buffer);
+		if (std::cin.eof())
+			break ;
 		if (!buffer.compare("ADD"))
-			pb.AddContact();
+			stopper = pb.AddContact();
 		else if (!buffer.compare("SEARCH"))
-			pb.DisplayPhoneBook();
+			stopper = pb.DisplayPhoneBook();
 		else if (!buffer.compare("EXIT"))
 			break ;
 		else
 			std::cout << "! Request not recognised." << std::endl;
+		if (stopper)
+			break ;
 	}
 	return (0);
 }

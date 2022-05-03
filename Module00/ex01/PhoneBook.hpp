@@ -32,9 +32,9 @@ class PhoneBook{
 
 		//phonebook manipulation methods
 		int getCounter(void) const;
-		void AddContact(void);
+		int AddContact(void);
 		std::string InputPrompt(std::string Entry, int code) const;
-		void DisplayPhoneBook(void);
+		int DisplayPhoneBook(void);
 		void DisplayEntry(int index) const;
 		void DisplayAll(void) const;
 };

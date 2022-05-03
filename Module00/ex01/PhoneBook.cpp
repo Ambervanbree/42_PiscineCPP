@@ -29,37 +29,59 @@ std::string PhoneBook::InputPrompt(std::string Entry, int code) const{
 	std::string input;
 	std::cout << ">> Enter " << Entry << ": " << std::endl;
 	getline(std::cin, input);
+	if (std::cin.eof()){
+		return "";
+	}
 	while (input.empty()){
 		if (code)
 			std::cout << "! Empty field not allowed. Enter " << Entry << " (promiss I won't tell...): " << std::endl;
 		else
 			std::cout << "! Empty field not allowed. Enter " << Entry << ": " << std::endl;
 		getline(std::cin, input);
+		if (std::cin.eof()){
+			return "";
+		}
 	}
 	return input;
 }
 
 
-void PhoneBook::AddContact(void){
+int PhoneBook::AddContact(void){
 	std::string	FirstName;
 	std::string LastName;
 	std::string NickName;
 	std::string PhoneNumber;
 	std::string DarkestSecret;
 	FirstName = InputPrompt("first name", 0);
+	if (FirstName.size() < 1){
+		return 1;
+	}
 	LastName = InputPrompt("last name", 0);
+	if (LastName.size() < 1){
+		return 1;
+	}
 	NickName = InputPrompt("nickname", 0);
+	if (NickName.size() < 1){
+		return 1;
+	}
 	PhoneNumber = InputPrompt("phone number", 0);
+	if (PhoneNumber.size() < 1){
+		return 1;
+	}
 	DarkestSecret = InputPrompt("darkest secret", 1);
+	if (DarkestSecret.size() < 1){
+		return 1;
+	}
 	PhoneBook::_Entry[PhoneBook::getCounter() % 8].setFirstName(FirstName);
 	PhoneBook::_Entry[PhoneBook::getCounter() % 8].setLastName(LastName);
 	PhoneBook::_Entry[PhoneBook::getCounter() % 8].setNickName(NickName);
 	PhoneBook::_Entry[PhoneBook::getCounter() % 8].setPhoneNumber(PhoneNumber);
 	PhoneBook::_Entry[PhoneBook::getCounter() % 8].setDarkestSecret(DarkestSecret);
 	_Counter++;
+	return 0;
 }
 
-void PhoneBook::DisplayPhoneBook(void){
+int PhoneBook::DisplayPhoneBook(void){
 	if (this->getCounter() == 0)
 		std::cout << "! PhoneBook has no entries yet." << std::endl;
 	else{
@@ -67,7 +89,9 @@ void PhoneBook::DisplayPhoneBook(void){
 		int index;
 		std::cout << ">> What index number do you want to see?" << std::endl;
 		std::cin >> index;
-		if (!std::cin || index < 1 || index > 8 || index > this->getCounter()){
+		if (std::cin.eof())
+			return 1;
+		else if (!std::cin || index < 1 || index > 8 || index > this->getCounter()){
 			std::cout << "! Index does not exist." << std::endl;
 		}
 		else{
@@ -76,6 +100,7 @@ void PhoneBook::DisplayPhoneBook(void){
 		std::cin.clear();
 		std::cin.ignore(INT_MAX, '\n');
 	}
+	return 0;
 }
 
 std::string	SizeCheck(std::string Input){
