@@ -18,6 +18,7 @@ class Zombie
 {
 	private:
 		std::string _name;
+		
 	public:
 		Zombie(std::string Name);
 		~Zombie();

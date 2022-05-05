@@ -13,7 +13,20 @@
 #include "Zombie.hpp"
 
 int	main(void){
-	Zombie	*hordeEva;
-	hordeEva = zombieHorde(20, "Eva");
-	delete [] hordeEva;
+	{
+		Zombie	*hordeEva;
+		hordeEva = zombieHorde(20, "Eva");
+		for(int i = 0; i < 20; i++){
+			hordeEva[i].announce();
+		}
+		delete [] hordeEva;
+	}
+	{
+		Zombie	*hordeLurch;
+		hordeLurch = zombieHorde(15, "Lurch");
+		for(int i = 0; i < 15; i++){
+			hordeLurch[i].announce();
+		}
+		delete [] hordeLurch;
+	}
 }

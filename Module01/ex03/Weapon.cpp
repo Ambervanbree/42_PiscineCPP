@@ -21,6 +21,9 @@ Weapon::~Weapon(void){
 }
 
 const std::string &Weapon::getType(void){
+	if (_type.empty()){
+		std::cout << "bare hands" << std::endl;
+	}
 	return _type;
 }
 

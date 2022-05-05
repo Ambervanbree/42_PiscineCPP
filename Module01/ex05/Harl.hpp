@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Karen.hpp                                          :+:      :+:    :+:   */
+/*   Harl.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,31 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KAREN_HPP
-# define KAREN_HPP
+#ifndef Harl_HPP
+# define Harl_HPP
 # include <iostream>
 # include <string>
 
-class Karen{
+class Harl{
 
 	private:
-		int			_filter;
-		std::string	_triggers[4];
-		// void (Karen::*_whatNow[4])();
 		void _debug (void) const;
 		void _info (void) const;
 		void _warning (void) const;
 		void _error (void) const;
 
 	public:
-		Karen(void);
-		~Karen(void);
+		Harl(void);
+		~Harl(void);
 
 		void complain(std::string level);
-		void setFilter(std::string filter);
-		int complainLevel(std::string level);
 };
 
-typedef	void(Karen::*whatNow)(void) const;
+typedef	void(Harl::*whatNow)(void) const;
 
 #endif

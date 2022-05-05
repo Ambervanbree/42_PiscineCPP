@@ -22,7 +22,12 @@ HumanB::~HumanB(void){
 }
 
 void HumanB::attack(void) const{
-	std::cout << this->_name << " attacks with their " << this->_weaponPTR->getType() << std::endl;
+	if (this->_weaponPTR){
+		std::cout << this->_name << " attacks with their " << this->_weaponPTR->getType() << std::endl;
+	}
+	else{
+		std::cout << this->_name << " attacks with their bear hands, cause they have no weapon yet. Good luck with that." << std::endl;
+	}
 }
 
 void HumanB::setWeapon(Weapon &weapon){

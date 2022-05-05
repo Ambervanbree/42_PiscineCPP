@@ -13,7 +13,7 @@
 NAME	=	complain
 CC		=	c++
 RM		=	rm -rf
-SRCS	=	main.cpp Karen.cpp
+SRCS	=	main.cpp Harl.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 INCL	=	.

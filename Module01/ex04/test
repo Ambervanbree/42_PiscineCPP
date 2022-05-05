@@ -1,7 +1,9 @@
 this is a file to test the code
 run the following executable:
-./replace test "xxx" "hello there"
-and see the following text change or not in new file test.replace:
+./replace test x y
+or:
+./replace test "the fol" "lalala"
+and see the text 
 xxx
 xxxxx
 
