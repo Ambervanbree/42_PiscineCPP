@@ -27,7 +27,7 @@ Harl::Harl(void){
 }
 
 Harl::~Harl(void){
-	std::cout << bold_on << "Harl is finally leaving again. Bye Harl, byyyyeeee!!!" << std::endl;
+	std::cout << bold_on << "Harl is finally leaving again. Bye Harl, byyyyeeee!!!"<< bold_off << std::endl;
 }
 
 void Harl::_debug(void) const{
@@ -42,7 +42,7 @@ void Harl::_info(void) const{
 
 void Harl::_warning(void) const{
 	std::cout << "\"I think I deserve to have some extra bacon for free.\n"
-	<< "I’ve been coming for years whereas you started working here since last month.\"\n" << std::endl;
+	"I’ve been coming for years whereas you started working here since last month.\"\n" << std::endl;
 }
 
 void Harl::_error(void) const{

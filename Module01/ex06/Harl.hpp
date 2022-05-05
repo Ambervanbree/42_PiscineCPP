@@ -29,7 +29,7 @@ class Harl{
 		Harl(void);
 		~Harl(void);
 
-		void complain(std::string level);
+		bool complain(std::string level);
 		void setFilter(std::string filter);
 		int complainLevel(std::string level);
 };

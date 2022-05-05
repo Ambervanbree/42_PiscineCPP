@@ -57,12 +57,15 @@ void Harl::_error(void) const{
 }
 
 int Harl::complainLevel(std::string level){
-	for(int i = 0; i < 4; ++i){
-		if (!level.compare(this->_triggers[i])){
-			if (this->_filter <= i)
-				return i;
-			else
-				return -1;
+	if (this->_filter == -1){
+		return -1;
+	}
+	else{
+		for(int i = 0; i < 4; ++i){
+			if (!level.compare(this->_triggers[i])){
+				if (this->_filter <= i)
+					return i;
+			}
 		}
 	}
 	return -2;
@@ -71,15 +74,18 @@ int Harl::complainLevel(std::string level){
 bool Harl::complain(std::string level){
 	whatNow 	function[4] = {&Harl::_debug, &Harl::_info, &Harl::_warning, &Harl::_error};
 	int realLevel = this->complainLevel(level);
+
 	switch (realLevel){
 		case 0 ... 3 :
 			(this->*(function[realLevel]))();
 			return true;
 		case -1 :
+			std::cout << "[ Probably complaining about insignificant problems ]\n" << std::endl;
+			return false;
+		case -2 :
 			return true;
 		default :
-			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl << std::endl;
-			return false;
+			return true;
 	}
 }
 

@@ -20,8 +20,16 @@ int main(int argc, char *argv[]){
 		return (1);
 	}
 	Harl.setFilter(argv[1]);
-	Harl.complain("DEBUG");
-	Harl.complain("INFO");
-	Harl.complain("WARNING");
-	Harl.complain("ERROR");
+	if (Harl.complain("DEBUG") == false){
+		return 0;
+	}
+	if (Harl.complain("INFO") == false){
+		return 0;
+	}
+	if (Harl.complain("WARNING") == false){
+		return 0;
+	}
+	if (Harl.complain("ERROR") == false){
+		return 0;
+	}
 }
