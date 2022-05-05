@@ -10,21 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 int main(int argc, char *argv[]){
-	Karen	Karen;
+	Harl	Harl;
 
 	if (argc != 2){
-		std::cerr << "I'm not even going to listen to her today!" << std::endl;
+		std::cerr << "I'm not even going to listen to him today!" << std::endl;
 		return (1);
 	}
-	Karen.setFilter(argv[1]);
-	Karen.complain("WARNING");
-	Karen.complain("DEBUG");
-	Karen.complain("SILENCE");
-	Karen.complain("INFO");
-	Karen.complain("WARNING");
-	Karen.complain("ERROR");
-	Karen.complain("Some more BS");
+	Harl.setFilter(argv[1]);
+	Harl.complain("DEBUG");
+	Harl.complain("INFO");
+	Harl.complain("WARNING");
+	Harl.complain("ERROR");
 }
