@@ -10,7 +10,7 @@ class Fixed{
 
 	public:
 		Fixed(void);
-		Fixed(int const n);
+		Fixed(const int n);
 		Fixed(const float fp);
 		Fixed(const Fixed &inst);
 		~Fixed(void);
