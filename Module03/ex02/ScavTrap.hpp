@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 14:42:25 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/09 14:42:26 by avan-bre         ###   ########.fr       */
+/*   Created: 2022/05/09 14:41:58 by avan-bre          #+#    #+#             */
+/*   Updated: 2022/05/09 17:37:18 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
+# include "ClapTrap.hpp"
 
-int	main(void){
-	ClapTrap	harry("Harry");
-	ClapTrap	henk("Henk");
+class ScavTrap : public ClapTrap{
+	private:
 
-	henk.attack("Harry");
-	henk.attack("Troy");
-	harry.attack("Henk");
-	henk.status();
-	henk.beRepaired(3);
-	henk.status();
-	harry.status();
-	harry.takeDamage(15);
-	harry.status();
-	harry.beRepaired(2);
-	harry.status();
-}
+	public:
+ 		ScavTrap(void);
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap &inst);
+		~ScavTrap(void);
+		ScavTrap & operator =(ScavTrap const &inst); 
+		void status(void) const;
+		void attack(const std::string &target);
+		void guardGate(void) const;
+};
+
+#endif

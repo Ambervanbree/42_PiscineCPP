@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 14:42:48 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/09 14:42:49 by avan-bre         ###   ########.fr       */
+/*   Created: 2022/05/09 14:42:03 by avan-bre          #+#    #+#             */
+/*   Updated: 2022/05/09 17:04:25 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ std::ostream& bold_on(std::ostream& os)
 std::ostream& bold_off(std::ostream& os)
 {
     return os << "\e[0m";
+}
+
+ClapTrap::ClapTrap(void) : _Name("Anonymous"), _Hit(10), _Energy(10), _Damage(0){
+	std::cout << CYAN << "Default ClapTrap initialised" << RESET << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _Name(name), _Hit(10), _Energy(10), _Damage(0){
@@ -52,6 +56,26 @@ ClapTrap & ClapTrap::operator =(ClapTrap const &inst){
 
 std::string	ClapTrap::getName() const {
 	return (this->_Name);
+}
+
+void ClapTrap::setName(std::string name){
+	this->_Name = name;
+	return ;
+}
+
+void ClapTrap::setHitPoints(int points){
+	this->_Hit = points;
+	return ;
+}
+
+void ClapTrap::setEnergyLevel(int level){
+	this->_Energy = level;
+	return ;
+}
+
+void ClapTrap::setAttackDamage(int damage){
+	this->_Damage = damage;
+	return ;
 }
 
 int	ClapTrap::getHitPoints() const {

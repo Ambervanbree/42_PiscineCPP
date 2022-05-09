@@ -5,26 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 14:42:25 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/09 14:42:26 by avan-bre         ###   ########.fr       */
+/*   Created: 2022/05/09 14:41:54 by avan-bre          #+#    #+#             */
+/*   Updated: 2022/05/09 18:04:06 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "FragTrap.hpp"
 
 int	main(void){
-	ClapTrap	harry("Harry");
-	ClapTrap	henk("Henk");
+	ClapTrap	brigitte("Brigitte");
+	FragTrap	henk("Hank");
+	FragTrap	anonymous;
 
-	henk.attack("Harry");
-	henk.attack("Troy");
-	harry.attack("Henk");
+	brigitte.status();
 	henk.status();
-	henk.beRepaired(3);
+	anonymous.status();
+	brigitte.takeDamage(12);
+	brigitte.status();
+	henk.takeDamage(12);
+	henk.beRepaired(1);
 	henk.status();
-	harry.status();
-	harry.takeDamage(15);
-	harry.status();
-	harry.beRepaired(2);
-	harry.status();
+	henk.highFivesGuys();
 }

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/09 14:42:41 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/09 14:42:42 by avan-bre         ###   ########.fr       */
+/*   Created: 2022/05/09 14:42:01 by avan-bre          #+#    #+#             */
+/*   Updated: 2022/05/09 17:05:52 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,15 @@ class ClapTrap{
 		int	_Damage;
 
 	public:
+		ClapTrap(void);
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap &inst);
 		~ClapTrap(void);
 		ClapTrap & operator =(ClapTrap const &inst);
+		void setName(std::string name);
+		void setHitPoints(int points);
+		void setEnergyLevel(int level);
+		void setAttackDamage(int damage);
 		std::string	getName() const;
 		int	getHitPoints() const;
 		int	getEnergyLevel() const;
@@ -35,5 +40,8 @@ class ClapTrap{
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 };
+
+std::ostream& bold_on(std::ostream& os);
+std::ostream& bold_off(std::ostream& os);
 
 #endif
