@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 17:32:32 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/09 17:51:01 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/10 12:33:08 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,12 @@
 # define FRAGTRAP_HPP
 # include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap{
-	private:
-
+class FragTrap : virtual public ClapTrap{
 	public:
  		FragTrap(void);
 		FragTrap(std::string name);
 		FragTrap(const FragTrap &inst);
 		~FragTrap(void);
-		FragTrap & operator =(FragTrap const &inst);
-		void status(void) const;
 		void highFivesGuys(void);
 };
 
