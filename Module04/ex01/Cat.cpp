@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/10 14:53:13 by avan-bre          #+#    #+#             */
+/*   Updated: 2022/05/17 12:23:41 by avan-bre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Cat.hpp"
+
+Cat::Cat(void){
+	std::cout << "Default constructor Cat called" << std::endl;
+	this->_type = "Cat";
+	this->_sound = "Miauw";
+	return ;
+}
+
+Cat::Cat(const Cat &inst){
+	std::cout << "Copy constructor Cat called" << std::endl;
+	*this = inst;
+	return ;
+}
+
+Cat::~Cat(void){
+	std::cout << "Default destructor Cat called" << std::endl;
+	return ;
+}
+
+Cat & Cat::operator =(Cat const &inst){
+	std::cout << "Assignment operator Cat called" << std::endl;
+	this->_type = inst.getType();
+	return *this;
+}
+
