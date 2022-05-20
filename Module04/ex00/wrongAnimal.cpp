@@ -13,23 +13,23 @@
 #include "wrongAnimal.hpp"
 
 wrongAnimal::wrongAnimal(void) : _type("wrong animal"), _sound("BEEEEEEHHH"){
-	std::cout << "Default constructor wrong Animal called" << std::endl;
+	std::cout << YELLOW << "Default constructor wrong Animal called" << RESET << std::endl;
 	return ;
 }
 
 wrongAnimal::wrongAnimal(const wrongAnimal &inst){
-	std::cout << "Copy constructor Wrong wrong Animal called" << std::endl;
+	std::cout << YELLOW << "Copy constructor Wrong wrong Animal called" << RESET << std::endl;
 	*this = inst;
 	return ;
 }
 
 wrongAnimal::~wrongAnimal(void){
-	std::cout << "Default destructor wrong Animal called" << std::endl;
+	std::cout << YELLOW << "Default destructor wrong Animal called" << RESET << std::endl;
 	return ;
 }
 
 wrongAnimal & wrongAnimal::operator =(wrongAnimal const &inst){
-	std::cout << "Assignment operator wrong Animal called" << std::endl;
+	std::cout << YELLOW << "Assignment operator wrong Animal called" << RESET << std::endl;
 	this->_type = inst.getType();
 	this->_sound = inst.getSound();
 	return *this;
