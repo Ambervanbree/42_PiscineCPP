@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:08 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/17 13:08:14 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/20 11:03:34 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,12 @@ class Animal{
 		Animal(void);
 		Animal(const Animal &inst);
 		virtual ~Animal(void);
-		Animal & operator =(Animal const &inst);
+		virtual Animal & operator =(Animal const &inst);
 
 		std::string	getType(void) const;
 		void makeSound(void) const;
+		virtual void IgotAnIdea(std::string idea) = 0;
+		virtual void whatWasIThinkingAgain(void) const = 0;
 };
 
 #endif

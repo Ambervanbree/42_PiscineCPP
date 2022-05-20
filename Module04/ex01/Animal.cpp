@@ -6,30 +6,30 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:59:32 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/17 12:25:00 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/18 16:10:03 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
 Animal::Animal(void) : _type("unset"), _sound("..."){
-	std::cout << "Default constructor Animal called" << std::endl;
+	std::cout << GREEN << "Default constructor Animal called" << RESET << std::endl;
 	return ;
 }
 
 Animal::Animal(const Animal &inst){
-	std::cout << "Copy constructor Animal called" << std::endl;
+	std::cout << GREEN << "Copy constructor Animal called" << RESET << std::endl;
 	*this = inst;
 	return ;
 }
 
 Animal::~Animal(void){
-	std::cout << "Default destructor Animal called" << std::endl;
+	std::cout << GREEN << "Default destructor Animal called" << RESET << std::endl;
 	return ;
 }
 
 Animal & Animal::operator =(Animal const &inst){
-	std::cout << "Assignment operator Animal called" << std::endl;
+	std::cout << GREEN << "Assignment operator Animal called" << RESET << std::endl;
 	this->_type = inst.getType();
 	return *this;
 }

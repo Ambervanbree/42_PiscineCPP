@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 09:08:08 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/18 09:09:03 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/18 16:57:46 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,18 @@
 # include "Animal.hpp"
 
 class Brain {
+	private:
+		std::string _ideas[100];
+	
 	public:
 		Brain(void);
 		Brain(const Brain &inst);
-		virtual ~Brain(void);
-		Brain & operator =(Brain const &inst);			
+		~Brain(void);
+		
+		Brain & operator =(Brain const &inst);
+
+		std::string retrieveIdea(int i) const;
+		void setIdea(std::string idea);
 };
+
+#endif

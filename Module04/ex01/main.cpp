@@ -6,52 +6,65 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:49:56 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/17 12:57:39 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/20 11:08:38 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "wrongCat.hpp"
-
-void	testSubject(void){
-	std::cout << BOLD << "Tests subject" << NOBOLD << std::endl;
-	
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	
-	std::cout << j->getType() << " is saying ";
-	j->makeSound();
-	std::cout << i->getType() << " is saying ";
-	i->makeSound(); //will output the cat sound!
-	std::cout << meta->getType() << " is saying ";
-	meta->makeSound();
-	
-	delete meta;
-	delete i;
-	delete j;
-}
-
-void	extraTest(void){
-	std::cout << BOLD << "Extra tests" << NOBOLD << std::endl;
-	
-	wrongAnimal	wa;
-	wrongAnimal *wc = new wrongCat;
-
-	std::cout << wa.getType() << " is saying ";
-	wa.makeSound();
-	std::cout << wc->getType() << " is saying ";
-	wc->makeSound();
-	delete wc;
-}
 
 int 	main(void){
-	testSubject();
-	std::cout << std::endl;
+
+// TEST MAKING AN ARRAY OF 10 ANIMALS, HALF DOGS, HALF CATS
+
+	Animal	*array[10];
+
+	int i = 0;
 	
-	extraTest();
+	for (;i < 5; i++){
+		std::cout << "Animal " << i << std::endl;
+		Dog *newDog = new Dog;
+		newDog->IgotAnIdea("I love humans");
+		array[i] = newDog;
+		std::cout << std::endl;
+	}
+	for (;i < 10; i++){
+		std::cout << "Animal " << i << std::endl;
+		Cat *newCat = new Cat;
+		newCat->IgotAnIdea("I hate humans");
+		array[i] = newCat;
+		std::cout << std::endl;
+	}
+
+// ALL ANIMALS CAN MAKE THEIR OWN SOUND
+
+	for (i = 0; i < 10; i++){
+		std::cout << i << " ";
+		array[i]->makeSound();
+	}
 	std::cout << std::endl;
 
-	return 0;
+// MAKING A COPY AND LET ALL ANIMALS MAKE SOUND AGAIN
+
+	Cat *newCat = new Cat;
+	newCat->IgotAnIdea("I hate humans");
+	newCat->IgotAnIdea("I want food");
+	newCat->IgotAnIdea("I need food");
+	newCat->whatWasIThinkingAgain();
+	std::cout << std::endl;
+	
+	delete array[0];
+	array[0] = newCat;
+	array[0]->whatWasIThinkingAgain();
+	array[1]->whatWasIThinkingAgain();
+	std::cout << std::endl;
+
+// DELETING THE ARRAY
+
+	for (i = 0; i < 10; i++){
+		std::cout << "Animal " << i << std::endl;
+		delete array[i];
+		std::cout << std::endl;
+	}
+
 }
