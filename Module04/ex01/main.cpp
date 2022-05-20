@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:49:56 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/20 11:08:38 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/20 11:21:58 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int 	main(void){
 		std::cout << "Animal " << i << std::endl;
 		Dog *newDog = new Dog;
 		newDog->IgotAnIdea("I love humans");
+		newDog->IgotAnIdea("I am happy");
 		array[i] = newDog;
 		std::cout << std::endl;
 	}
