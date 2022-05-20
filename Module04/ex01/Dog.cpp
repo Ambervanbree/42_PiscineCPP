@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:44:30 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/20 11:09:23 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/20 11:53:51 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,11 @@ Dog::Dog(void){
 	return ;
 }
 
-Dog::Dog(const Dog &inst){
-	std::cout << MAGENTA << "Copy constructor Dog called" << RESET << std::endl;
+Dog::Dog(const Dog &inst) : Animal(){
+	std::cout << CYAN << "Copy constructor Dog called" << RESET << std::endl;
+	this->_type = "Dog";
+	this->_sound = "Miauw";
+	this->_dogBrain = new Brain;
 	*this = inst;
 	return ;
 }

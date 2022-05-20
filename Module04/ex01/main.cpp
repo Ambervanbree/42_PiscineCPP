@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:49:56 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/20 11:21:58 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/20 11:51:50 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int 	main(void){
 
 // TEST MAKING AN ARRAY OF 10 ANIMALS, HALF DOGS, HALF CATS
-
+	std::cout << BOLD << "[ TEST MAKING AN ARRAY OF 10 ANIMALS, HALF DOGS, HALF CATS ]\n" << NOBOLD << std::endl;
 	Animal	*array[10];
 
 	int i = 0;
@@ -38,22 +38,23 @@ int 	main(void){
 	}
 
 // ALL ANIMALS CAN MAKE THEIR OWN SOUND
-
+	std::cout << BOLD << "[ ALL ANIMALS CAN MAKE THEIR OWN SOUND ]\n" << NOBOLD << std::endl;
 	for (i = 0; i < 10; i++){
 		std::cout << i << " ";
 		array[i]->makeSound();
 	}
 	std::cout << std::endl;
 
-// MAKING A COPY AND LET ALL ANIMALS MAKE SOUND AGAIN
-
+// MAKING A NEW CAT, COPYING IT AND PUTTING THE ORIGINAL IN THE ARRAY
+	std::cout << BOLD << "[ MAKING A NEW CAT, COPYING IT AND PUTTING THE ORIGINAL IN THE ARRAY ]\n" << NOBOLD << std::endl;
 	Cat *newCat = new Cat;
 	newCat->IgotAnIdea("I hate humans");
 	newCat->IgotAnIdea("I want food");
 	newCat->IgotAnIdea("I need food");
+	Cat	newerCat(*newCat);
 	newCat->whatWasIThinkingAgain();
+	newerCat.whatWasIThinkingAgain();
 	std::cout << std::endl;
-	
 	delete array[0];
 	array[0] = newCat;
 	array[0]->whatWasIThinkingAgain();
@@ -61,7 +62,7 @@ int 	main(void){
 	std::cout << std::endl;
 
 // DELETING THE ARRAY
-
+	std::cout << BOLD << "[ DELETING THE ARRAY ]\n" << NOBOLD << std::endl;
 	for (i = 0; i < 10; i++){
 		std::cout << "Animal " << i << std::endl;
 		delete array[i];
