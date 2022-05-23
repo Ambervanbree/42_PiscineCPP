@@ -12,7 +12,7 @@
 
 #include "wrongAnimal.hpp"
 
-wrongAnimal::wrongAnimal(void) : _type("wrong animal"), _sound("BEEEEEEHHH"){
+wrongAnimal::wrongAnimal(void) : _type("wrong animal"){
 	std::cout << YELLOW << "Default constructor wrong Animal called" << RESET << std::endl;
 	return ;
 }
@@ -31,7 +31,6 @@ wrongAnimal::~wrongAnimal(void){
 wrongAnimal & wrongAnimal::operator =(wrongAnimal const &inst){
 	std::cout << YELLOW << "Assignment operator wrong Animal called" << RESET << std::endl;
 	this->_type = inst.getType();
-	this->_sound = inst.getSound();
 	return *this;
 }
 
@@ -39,11 +38,7 @@ std::string	wrongAnimal::getType(void) const{
 	return this->_type;
 }
 
-std::string	wrongAnimal::getSound(void) const{
-	return this->_sound;
-}
-
 void wrongAnimal::makeSound(void) const{
-	std::cout << this->_sound << std::endl;
+	std::cout << "**wrongAnimal sound**" << std::endl;
 	return ;
 }

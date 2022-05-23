@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:56 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:41:57 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 14:16:10 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ class Cat : public Animal{
 		Cat(void);
 		Cat(const Cat &inst);
 		~Cat(void);
+		Cat & operator =(Cat const &inst);
 
 		void makeSound(void) const;
 };

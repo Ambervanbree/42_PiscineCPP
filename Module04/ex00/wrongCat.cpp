@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:13 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:44:47 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 14:13:28 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,12 @@
 wrongCat::wrongCat(void){
 	std::cout << YELLOW << "Default constructor wrong Cat called" << RESET << std::endl;
 	this->_type = "wrongCat";
-	this->_sound = "Kukelekuuuuu";
 	return ;
 }
 
 wrongCat::wrongCat(const wrongCat &inst){
 	std::cout << YELLOW << "Copy constructor wrong Cat called" << RESET << std::endl;
 	this->_type = "wrongCat";
-	this->_sound = "Kukelekuuuuu";
 	*this = inst;
 	return ;
 }
@@ -33,6 +31,6 @@ wrongCat::~wrongCat(void){
 }
 
 void wrongCat::makeSound(void) const{
-	std::cout << this->_sound << std::endl;
+	std::cout << "wrongCat sound" << std::endl;
 	return ;	
 }

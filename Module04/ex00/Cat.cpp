@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:13 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:49:36 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 14:22:56 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,14 @@ Cat::Cat(const Cat &inst) : Animal(){
 	this->_type = "Cat";
 	*this = inst;
 	return ;
+}
+
+Cat & Cat::operator =(Cat const &inst){
+	std::cout << CYAN << "Assignment operator Cat called" << RESET << std::endl;
+	if (this != &inst){
+		this->_type = inst._type;
+	}
+	return *this;
 }
 
 Cat::~Cat(void){

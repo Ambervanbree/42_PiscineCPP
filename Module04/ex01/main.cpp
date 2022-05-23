@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:49:56 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/20 15:48:37 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 14:33:17 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,8 +51,8 @@ int 	main(void){
 	newCat->IgotAnIdea("I hate humans");
 	newCat->IgotAnIdea("I want food");
 	newCat->IgotAnIdea("I need food");
-	Cat	newerCat(*newCat);
 	newCat->whatWasIThinkingAgain();
+	Cat	newerCat(*newCat);
 	newerCat.whatWasIThinkingAgain();
 	std::cout << std::endl;
 	delete array[0];

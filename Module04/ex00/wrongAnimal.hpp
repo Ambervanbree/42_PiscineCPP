@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:08 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:45:04 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 14:12:00 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,16 @@
 class wrongAnimal{
 	protected:
 		std::string _type;
-		std::string _sound;
 
 	public:
 		wrongAnimal(void);
 		wrongAnimal(const wrongAnimal &inst);
-		virtual ~wrongAnimal(void);
+		~wrongAnimal(void);
 		wrongAnimal & operator =(wrongAnimal const &inst);
 
 		std::string	getType(void) const;
 		std::string	getSound(void) const;
-		virtual void makeSound(void) const;
+		void makeSound(void) const;
 };
 
 #endif
