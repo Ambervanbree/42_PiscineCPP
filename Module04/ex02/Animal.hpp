@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:08 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:45:04 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 11:55:08 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 # define RESET   "\033[0m"
 # define GREEN	 "\033[32m"
@@ -25,20 +25,20 @@
 
 # include <iostream>
 
-class wrongAnimal{
+class AAnimal{
 	protected:
 		std::string _type;
-		std::string _sound;
 
 	public:
-		wrongAnimal(void);
-		wrongAnimal(const wrongAnimal &inst);
-		virtual ~wrongAnimal(void);
-		wrongAnimal & operator =(wrongAnimal const &inst);
+		AAnimal(void);
+		AAnimal(const AAnimal &inst);
+		virtual ~AAnimal(void);
+		AAnimal & operator =(AAnimal const &inst);
 
 		std::string	getType(void) const;
-		std::string	getSound(void) const;
-		virtual void makeSound(void) const;
+		virtual void makeSound(void) const = 0;
+		virtual void IgotAnIdea(std::string idea) = 0;
+		virtual void whatWasIThinkingAgain(void) const = 0;
 };
 
 #endif

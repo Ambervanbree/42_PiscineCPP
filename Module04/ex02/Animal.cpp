@@ -6,39 +6,34 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:59:32 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:53:09 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 11:54:04 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal(void) : _type("unset"){
-	std::cout << GREEN << "Default constructor Animal called" << RESET << std::endl;
+AAnimal::AAnimal(void) : _type("unset"){
+	std::cout << GREEN << "Default constructor AAnimal called" << RESET << std::endl;
 	return ;
 }
 
-Animal::Animal(const Animal &inst){
-	std::cout << GREEN << "Copy constructor Animal called" << RESET << std::endl;
+AAnimal::AAnimal(const AAnimal &inst){
+	std::cout << GREEN << "Copy constructor AAnimal called" << RESET << std::endl;
 	*this = inst;
 	return ;
 }
 
-Animal::~Animal(void){
-	std::cout << GREEN << "Default destructor Animal called" << RESET << std::endl;
+AAnimal::~AAnimal(void){
+	std::cout << GREEN << "Default destructor AAnimal called" << RESET << std::endl;
 	return ;
 }
 
-Animal & Animal::operator =(Animal const &inst){
-	std::cout << GREEN << "Assignment operator Animal called" << RESET << std::endl;
+AAnimal & AAnimal::operator =(AAnimal const &inst){
+	std::cout << GREEN << "Assignment operator AAnimal called" << RESET << std::endl;
 	this->_type = inst.getType();
 	return *this;
 }
 
-std::string	Animal::getType(void) const{
+std::string	AAnimal::getType(void) const{
 	return this->_type;
-}
-
-void Animal::makeSound(void) const{
-	std::cout << "..." << std::endl;
-	return ;
 }

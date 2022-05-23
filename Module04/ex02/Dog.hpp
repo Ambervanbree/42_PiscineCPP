@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 14:53:56 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:45:14 by avan-bre         ###   ########.fr       */
+/*   Created: 2022/05/17 11:45:04 by avan-bre          #+#    #+#             */
+/*   Updated: 2022/05/23 11:55:53 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef DOG_HPP
+# define DOG_HPP
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-# include "wrongAnimal.hpp"
-
-class wrongCat : public wrongAnimal{
+class Dog : public AAnimal{
+	private:
+		Brain *_dogBrain;
+	
 	public:
-		wrongCat(void);
-		wrongCat(const wrongCat &inst);
-		~wrongCat(void);
+		Dog(void);
+		Dog(const Dog &inst);
+		~Dog(void);
+		Dog & operator =(Dog const &inst);
 
 		void makeSound(void) const;
+		void IgotAnIdea(std::string idea);
+		void whatWasIThinkingAgain(void) const;
 };
 
 #endif

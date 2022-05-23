@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:13 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/20 11:59:47 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 11:44:47 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,9 @@ wrongCat::wrongCat(const wrongCat &inst){
 wrongCat::~wrongCat(void){
 	std::cout << YELLOW << "Default destructor wrong Cat called" << RESET << std::endl;
 	return ;
+}
+
+void wrongCat::makeSound(void) const{
+	std::cout << this->_sound << std::endl;
+	return ;	
 }

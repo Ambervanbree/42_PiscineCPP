@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:56 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/20 11:03:47 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 11:46:24 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class Cat : public Animal{
 		~Cat(void);
 		Cat & operator =(Cat const &inst);
 
+		void makeSound(void) const;
 		void IgotAnIdea(std::string idea);
 		void whatWasIThinkingAgain(void) const;
 };

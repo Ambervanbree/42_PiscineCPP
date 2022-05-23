@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wrongCat.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/10 14:53:56 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:45:14 by avan-bre         ###   ########.fr       */
+/*   Created: 2022/05/17 11:49:56 by avan-bre          #+#    #+#             */
+/*   Updated: 2022/05/20 15:47:57 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Cat.hpp"
+#include "Dog.hpp"
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
+int 	main(void){
+	Dog		newDog;
+	Cat		newCat;
 
-# include "wrongAnimal.hpp"
+	newDog.makeSound();
+	newCat.makeSound();
 
-class wrongCat : public wrongAnimal{
-	public:
-		wrongCat(void);
-		wrongCat(const wrongCat &inst);
-		~wrongCat(void);
-
-		void makeSound(void) const;
-};
-
-#endif
+	// but instantiating a class AAnimal is not possible. Uncomment to check:
+	// AAnimal	newAAnimal;
+	// newAAnimal.makeSound();
+}

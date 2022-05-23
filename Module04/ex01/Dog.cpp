@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:44:30 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/20 11:53:51 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 11:52:47 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,12 @@ Dog::Dog(void){
 	std::cout << MAGENTA << "Default constructor Dog called" << RESET << std::endl;
 	this->_dogBrain = new Brain;
 	this->_type = "Dog";
-	this->_sound = "Woef Woef";
 	return ;
 }
 
 Dog::Dog(const Dog &inst) : Animal(){
 	std::cout << CYAN << "Copy constructor Dog called" << RESET << std::endl;
 	this->_type = "Dog";
-	this->_sound = "Miauw";
 	this->_dogBrain = new Brain;
 	*this = inst;
 	return ;
@@ -38,7 +36,6 @@ Dog::~Dog(void){
 Dog & Dog::operator =(Dog const &inst){
 	std::cout << CYAN << "Assignment operator Dog called" << RESET << std::endl;
 	this->_type = inst._type;
-	this->_sound = inst._sound;
 	for (int i = 0; i < 100; i++){
 		this->_dogBrain->setIdea(inst._dogBrain->retrieveIdea(i));
 	}
@@ -57,4 +54,9 @@ void Dog::whatWasIThinkingAgain(void) const{
 		i++;
 	}
 	return ;
+}
+
+void Dog::makeSound(void) const{
+	std::cout << "Woef Woef" << std::endl;
+	return ;	
 }

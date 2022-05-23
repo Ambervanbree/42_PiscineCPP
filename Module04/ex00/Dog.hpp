@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:45:04 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/18 09:21:54 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 11:42:01 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ class Dog : public Animal{
 		Dog(void);
 		Dog(const Dog &inst);
 		~Dog(void);
+
+		void makeSound(void) const;
 };
 
 #endif

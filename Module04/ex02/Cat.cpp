@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:13 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:52:15 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 11:54:33 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Cat::Cat(void){
 	return ;
 }
 
-Cat::Cat(const Cat &inst) : Animal(){
+Cat::Cat(const Cat &inst) : AAnimal(){
 	std::cout << CYAN << "Copy constructor Cat called" << RESET << std::endl;
 	this->_type = "Cat";
 	this->_catBrain = new Brain;

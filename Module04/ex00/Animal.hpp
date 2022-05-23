@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:08 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/18 09:16:29 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/23 11:50:08 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@
 class Animal{
 	protected:
 		std::string _type;
-		std::string _sound;
 
 	public:
 		Animal(void);
@@ -37,8 +36,7 @@ class Animal{
 		Animal & operator =(Animal const &inst);
 
 		std::string	getType(void) const;
-		std::string	getSound(void) const;
-		void makeSound(void) const;
+		virtual void makeSound(void) const;
 };
 
 #endif
