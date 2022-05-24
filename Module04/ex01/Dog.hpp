@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:45:04 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:46:30 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/24 14:42:16 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Dog : public Animal{
 		Dog & operator =(Dog const &inst);
 
 		void makeSound(void) const;
-		void IgotAnIdea(std::string idea);
+		void IgotAnIdea(std::string idea) const;
 		void whatWasIThinkingAgain(void) const;
 };
 

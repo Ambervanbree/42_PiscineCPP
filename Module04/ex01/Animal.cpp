@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:59:32 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:53:09 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/24 14:41:41 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,3 +42,12 @@ void Animal::makeSound(void) const{
 	std::cout << "..." << std::endl;
 	return ;
 }
+
+// void IgotAnIdea(std::string idea){
+// 	(void)idea;
+// 	std::cout << "I have no brain, so I can't do anything with this idea." << std::endl;
+// }
+
+// void whatWasIThinkingAgain(void){
+// 	std::cout << "Not much, because I have no brain." << std::endl;
+// }

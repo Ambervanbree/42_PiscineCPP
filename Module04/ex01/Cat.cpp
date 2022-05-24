@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:13 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:52:15 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/24 14:41:57 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Cat & Cat::operator =(Cat const &inst){
 	return *this;
 }
 
-void Cat::IgotAnIdea(std::string idea){
+void Cat::IgotAnIdea(std::string idea) const{
 	this->_catBrain->setIdea(idea);
 	return ;
 }

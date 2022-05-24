@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/17 11:44:30 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 11:52:47 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/24 14:42:12 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Dog & Dog::operator =(Dog const &inst){
 	return *this;
 }
 
-void Dog::IgotAnIdea(std::string idea){
+void Dog::IgotAnIdea(std::string idea) const{
 	this->_dogBrain->setIdea(idea);
 	return ;
 }
