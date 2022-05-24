@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 14:53:08 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/24 14:41:35 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/24 14:47:52 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ class Animal{
 
 		std::string	getType(void) const;
 		virtual void makeSound(void) const;
-		// virtual void IgotAnIdea(std::string idea);
-		// virtual void whatWasIThinkingAgain(void);
 };
 
 #endif
