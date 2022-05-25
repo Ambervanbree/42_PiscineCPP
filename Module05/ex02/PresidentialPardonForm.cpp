@@ -52,7 +52,8 @@ std::string	PresidentialPardonForm::getTarget(void) const{
 
 void		PresidentialPardonForm::execute(Bureaucrat const & executor){
 	std::cout << "\U00002705 " << executor.getName() << " executed " << this->getName() << std::endl;
-	std::cout << "It is formally informed that through this form "
-	<< this->_target << " has been pardoned by President Zaphod Breeblebox" << std::endl;
+	std::cout << "It is formally informed that through this form ";
+	this->_target.append("x");
+	std::cout << this->_target << " has been pardoned by President Zaphod Breeblebox" << std::endl;
 	return ;
 }

@@ -12,6 +12,7 @@
 
 #include "RobotomyRequestForm.hpp"
 #include <cstdlib>
+#include <ctime>
 
 RobotomyRequestForm::RobotomyRequestForm(void) : 
 	AForm("Random Robotomy Form", 72, 45),
@@ -54,10 +55,11 @@ std::string	RobotomyRequestForm::getTarget(void) const{
 void		RobotomyRequestForm::execute(Bureaucrat const & executor){
 	std::cout << "\U00002705 " << executor.getName() << " executed " << this->getName() << std::endl;
 	std::cout << BOLD << "!!!! DDrGGRrrrrggggdddrrrGGrUUUUU !!!!" << RESET << std::endl;
-	srand(time(0));
-	int 	number = (rand() % 2);
-	std::cout << number << std::endl;
-	if (number == 0){
+	if (!this->_timeSet){
+		srand(time(0));
+		this->_timeSet = true;
+	}
+	if (rand() % 2){
 		std::cout << this->_target << " has succesfully been robotomized! \U0001F916 \U0001F916" << std::endl;
 	}
 	else{

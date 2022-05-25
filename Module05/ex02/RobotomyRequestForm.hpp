@@ -18,6 +18,7 @@
 class RobotomyRequestForm : public AForm{
 	private:
 		std::string	_target;
+		bool		_timeSet;
 
 	public: 
 		RobotomyRequestForm(void);

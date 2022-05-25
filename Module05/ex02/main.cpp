@@ -15,6 +15,7 @@
 #include "PresidentialPardonForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include <cstdlib>
 
 int	main(void){
 	std::cout << "___________________________________________________________________________________" << std::endl << std::endl;
