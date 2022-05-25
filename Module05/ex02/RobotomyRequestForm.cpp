@@ -11,25 +11,26 @@
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+#include <cstdlib>
 
 RobotomyRequestForm::RobotomyRequestForm(void) : 
 	AForm("Random Robotomy Form", 72, 45),
 	_target("Random Target"){
-	std::cout << GREEN << "Default constructor Presidential Pardon Form called" << RESET << std::endl;
+	std::cout << BLUE << "Default constructor Robotomy Request Form called" << RESET << std::endl;
 	return ;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string name, std::string target) :
 	AForm(name, 72, 45),
 	_target(target){
-	std::cout << GREEN << "Parametrised constructor Presidential Pardon Form called" << RESET << std::endl;
+	std::cout << BLUE << "Parametrised constructor Robotomy Request Form called" << RESET << std::endl;
 	return ;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &inst) :
 	AForm(inst.getName(), 72, 45),
 	_target(inst.getTarget()){
-	std::cout << GREEN << "Copy constructor Presidential Pardon Form called" << RESET << std::endl;
+	std::cout << BLUE << "Copy constructor Robotomy Request Form called" << RESET << std::endl;
 	return ;
 }
 
@@ -42,7 +43,7 @@ RobotomyRequestForm & RobotomyRequestForm::operator = (const RobotomyRequestForm
 }
 
 RobotomyRequestForm::~RobotomyRequestForm(void){
-	std::cout << GREEN << "Destructor Presidential Pardon Form called" << RESET << std::endl;
+	std::cout << BLUE << "Destructor Robotomy Request Form called" << RESET << std::endl;
 	return ;	
 }
 
@@ -52,5 +53,15 @@ std::string	RobotomyRequestForm::getTarget(void) const{
 
 void		RobotomyRequestForm::execute(Bureaucrat const & executor){
 	std::cout << "\U00002705 " << executor.getName() << " executed " << this->getName() << std::endl;
+	std::cout << BOLD << "!!!! DDrGGRrrrrggggdddrrrGGrUUUUU !!!!" << RESET << std::endl;
+	srand(time(0));
+	int 	number = (rand() % 2);
+	std::cout << number << std::endl;
+	if (number == 0){
+		std::cout << this->_target << " has succesfully been robotomized! \U0001F916 \U0001F916" << std::endl;
+	}
+	else{
+		std::cout << "Robotomy failed .... " << std::endl;
+	}
 	return ;
 }

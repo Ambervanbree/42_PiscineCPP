@@ -116,6 +116,10 @@ const char* AForm::NotSignedYet::what() const throw(){
 	return " form is not signed yet.";
 }
 
+const char* AForm::CouldNotOpenFile::what() const throw(){
+	return " shrubbery form could not be created.";
+}
+
 std::ostream & operator <<(std::ostream &o, AForm const &inst){
 	o << LINE << "Form " << inst.getName() << RESET
 	<< "\nSigned:                   ";

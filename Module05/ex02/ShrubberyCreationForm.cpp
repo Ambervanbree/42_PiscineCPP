@@ -15,21 +15,21 @@
 ShrubberyCreationForm::ShrubberyCreationForm(void) : 
 	AForm("Random Shrubbery Form", 145, 137),
 	_target("Random Target"){
-	std::cout << GREEN << "Default constructor Presidential Pardon Form called" << RESET << std::endl;
+	std::cout << GREEN << "Default constructor Shrubbery Creation Form called" << RESET << std::endl;
 	return ;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string name, std::string target) :
 	AForm(name, 145, 137),
 	_target(target){
-	std::cout << GREEN << "Parametrised constructor Presidential Pardon Form called" << RESET << std::endl;
+	std::cout << GREEN << "Parametrised constructor Shrubbery Creation Form called" << RESET << std::endl;
 	return ;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &inst) :
 	AForm(inst.getName(), 145, 137),
 	_target(inst.getTarget()){
-	std::cout << GREEN << "Copy constructor Presidential Pardon Form called" << RESET << std::endl;
+	std::cout << GREEN << "Copy constructor Shrubbery Creation Form called" << RESET << std::endl;
 	return ;
 }
 
@@ -42,7 +42,7 @@ ShrubberyCreationForm & ShrubberyCreationForm::operator = (const ShrubberyCreati
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(void){
-	std::cout << GREEN << "Destructor Presidential Pardon Form called" << RESET << std::endl;
+	std::cout << GREEN << "Destructor Shrubbery Creation Form called" << RESET << std::endl;
 	return ;	
 }
 
@@ -51,7 +51,51 @@ std::string	ShrubberyCreationForm::getTarget(void) const{
 }
 
 void		ShrubberyCreationForm::execute(Bureaucrat const & executor){
-	std::cout << "\U00002705 " << executor.getName() << " executed " << this->getName() << std::endl;
+	std::string		fileName(this->_target);
+	fileName.append("_shrubbery");
+	std::ofstream	ofs;
+	
+	ofs.open(fileName.c_str(), std::ios_base::app);
+	if (ofs.is_open()){
+		for (int i = 0; i < 2; i++){
+			ofs << " \
+\n             _{\\ _{\\{\\/}/}/}__ \
+\n           {/{/\\}{/{/\\}(\\}{/\\} _ \
+\n           {/{/\\}{/{/\\}(_)\\}{/{/\\}  _ \
+\n        {\\{/(\\}\\}{/{/\\}\\}{/){/\\}\\} /\\} \
+\n       {/{/(_)/}{\\{/)\\}{\\(_){/}/}/}/} \
+\n      _{\\{/{/{\\{/{/(_)/}/}/}{\\(/}/}/} \
+\n     {/{/{\\{\\{\\(/}{\\{\\/}/}{\\}(_){\\/}\\} \
+\n     _{\\{/{\\{/(_)\\}/}{/{/{/\\}\\})\\}{/\\} \
+\n    {/{/{\\{\\(/}{/{\\{\\{\\/})/}{\\(_)/}/}\\} \
+\n     {\\{\\/}(_){\\{\\{\\/}/}(_){\\/}{\\/}/})/} \
+\n      {/{\\{\\/}{/{\\{\\{\\/}/}{\\{\\/}/}\\}(_) \
+\n     {/{\\{\\/}{/){\\{\\{\\/}/}{\\{\\(/}/}\\}/} \
+\n      {/{\\{\\/}(_){\\{\\{\\(/}/}{\\(_)/}/}\\} \
+\n        {/({/{\\{/{\\{\\/}(_){\\/}/}\\}/}(\\} \
+\n         (_){/{\\/}{\\{\\/}/}{\\{\\)/}/}(_) \
+\n         (_){/{\\/}{\\{\\/}/}{\\{\\)/}/}(_) \
+\n           {/{/{\\{\\/}{/{\\{\\{\\(_)/} \
+\n            {/{\\{\\{\\/}/}{\\{\\\\}/} \
+\n             {){/ {\\/}{\\/} \\}\\} \
+\n                  \\.-'.-/ \
+\n         __...--- |'-.-'| --...__ \
+\n  _...--      '   |'-.-'|  ' -.  ""--..__ \
+\n-     ' .  . '    |.'-._| '  . .  '   \
+\n.  '-  '    .--'  | '-.'|    .  '  . ' \
+\n         ' ..     |'-_.-| \
+\n .  '  .       _.-|-._ -|-._  .  '  . \
+\n             .'   |'- .-|   '. \
+\n ..-'   ' .  '.   `-._.-´   .'  '  - . \
+\n  .-' '        '-._______.-'     '  . \
+\n       .      ~," << std::endl;
+}
+		ofs.close();
+		std::cout << "\U00002705 " << executor.getName() << " executed " << this->getName() << std::endl;
+	}
+	else{
+		throw AForm::CouldNotOpenFile();
+	}
 	return ;
 }
 

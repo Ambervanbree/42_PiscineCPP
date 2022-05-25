@@ -15,6 +15,7 @@
 
 # include "Bureaucrat.hpp"
 # include <iostream>
+# include <fstream>
 
 class Bureaucrat;
 
@@ -59,6 +60,10 @@ class AForm{
 				virtual const char* what() const throw();				
 		};
 		class NotSignedYet : public std::exception{
+			public:
+				virtual const char* what() const throw();				
+		};
+		class CouldNotOpenFile : public std::exception{
 			public:
 				virtual const char* what() const throw();				
 		};
