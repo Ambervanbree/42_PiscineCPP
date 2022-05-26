@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/26 10:53:51 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/26 10:59:40 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 14:12:34 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void){
 		std::cout << Louise << std::endl;
 	}
 	catch (std::exception & e){
-		std::cout << RED << e.what() << RESET << std::endl;
+		std::cerr << RED << e.what() << RESET << std::endl;
 	}
 	std::cout << std::endl;
 
@@ -29,7 +29,7 @@ int	main(void){
 		std::cout << Louise << std::endl;
 	} 
 	catch (std::exception & e){
-		std::cout << RED << e.what() << RESET << std::endl;
+		std::cerr << RED << e.what() << RESET << std::endl;
 	}
 	std::cout << std::endl;	
 	
@@ -44,7 +44,7 @@ int	main(void){
 		std::cout << Louise << std::endl;
 	}
 	catch (std::exception & e){
-		std::cout << RED << e.what() << RESET << std::endl;
+		std::cerr << RED << e.what() << RESET << std::endl;
 	}
 	std::cout << std::endl;		
 
@@ -58,7 +58,7 @@ int	main(void){
 		std::cout << Louise << std::endl;
 	}
 	catch (std::exception & e){
-		std::cout << RED << e.what() << RESET << std::endl;
+		std::cerr << RED << e.what() << RESET << std::endl;
 	}
 	std::cout << std::endl;	
 
@@ -72,7 +72,7 @@ int	main(void){
 		std::cout << Louise << std::endl;
 	}
 	catch (std::exception & e){
-		std::cout << RED << e.what() << RESET << std::endl;
+		std::cerr << RED << e.what() << RESET << std::endl;
 	}
 	std::cout << std::endl;
 }
