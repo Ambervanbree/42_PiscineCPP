@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/09 14:43:05 by avan-bre          #+#    #+#             */
+/*   Updated: 2022/05/09 14:43:06 by avan-bre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_HPP
 # define FIXED_HPP
 # include <iostream>
@@ -9,7 +21,7 @@ class Fixed{
 
 	public:
 		Fixed(void);
-		Fixed(int const n);
+		Fixed(const int n);
 		Fixed(const float fp);
 		Fixed(const Fixed &inst);
 		~Fixed(void);

@@ -6,16 +6,24 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:42:01 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/09 17:05:52 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/10 11:21:00 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
+
 # include <iostream>
 
+# define RESET   "\033[0m"
+# define GREEN	 "\033[32m"
+# define YELLOW  "\033[33m"
+# define BLUE    "\033[34m"
+# define CYAN    "\033[36m"
+# define RED     "\033[31m" 
+
 class ClapTrap{
-	private:
+	protected:
 		std::string _Name;
 		int	_Hit;
 		int	_Energy;
@@ -27,10 +35,6 @@ class ClapTrap{
 		ClapTrap(const ClapTrap &inst);
 		~ClapTrap(void);
 		ClapTrap & operator =(ClapTrap const &inst);
-		void setName(std::string name);
-		void setHitPoints(int points);
-		void setEnergyLevel(int level);
-		void setAttackDamage(int damage);
 		std::string	getName() const;
 		int	getHitPoints() const;
 		int	getEnergyLevel() const;

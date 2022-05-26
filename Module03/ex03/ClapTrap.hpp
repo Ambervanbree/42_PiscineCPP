@@ -6,14 +6,14 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:42:01 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/10 11:35:40 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/10 14:55:49 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
-# include <iostream>
+# include <iostream>CatCatCat
 
 # define RESET   "\033[0m"
 # define GREEN	 "\033[32m"
@@ -23,7 +23,7 @@
 # define RED     "\033[31m"
 # define MAGENTA "\033[35m"
 
-class ClapTrap{
+class ClapTrap{Cat
 	protected:
 		std::string _Name;
 		int	_Hit;

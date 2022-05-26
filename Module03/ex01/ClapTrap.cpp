@@ -6,14 +6,11 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:42:03 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/09 17:04:25 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/10 11:21:39 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-#define RESET   "\033[0m"
-#define CYAN    "\033[36m"
-#define RED     "\033[31m" 
 
 std::ostream& bold_on(std::ostream& os)
 {
@@ -56,26 +53,6 @@ ClapTrap & ClapTrap::operator =(ClapTrap const &inst){
 
 std::string	ClapTrap::getName() const {
 	return (this->_Name);
-}
-
-void ClapTrap::setName(std::string name){
-	this->_Name = name;
-	return ;
-}
-
-void ClapTrap::setHitPoints(int points){
-	this->_Hit = points;
-	return ;
-}
-
-void ClapTrap::setEnergyLevel(int level){
-	this->_Energy = level;
-	return ;
-}
-
-void ClapTrap::setAttackDamage(int damage){
-	this->_Damage = damage;
-	return ;
 }
 
 int	ClapTrap::getHitPoints() const {

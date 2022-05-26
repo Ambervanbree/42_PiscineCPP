@@ -6,13 +6,17 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:42:41 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/09 14:42:42 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/10 10:36:34 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 # include <iostream>
+
+# define RESET   "\033[0m"
+# define CYAN    "\033[36m"
+# define RED     "\033[31m" 
 
 class ClapTrap{
 	private:

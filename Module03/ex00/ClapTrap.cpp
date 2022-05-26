@@ -6,14 +6,11 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/09 14:42:48 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/09 14:42:49 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/10 10:36:19 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-#define RESET   "\033[0m"
-#define CYAN    "\033[36m"
-#define RED     "\033[31m" 
 
 std::ostream& bold_on(std::ostream& os)
 {

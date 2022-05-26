@@ -1,36 +1,55 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/09 14:43:07 by avan-bre          #+#    #+#             */
+/*   Updated: 2022/05/09 14:43:08 by avan-bre         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 #include <cmath>
 
+#define RESET   "\033[0m"
+#define GREEN	"\033[32m"
+#define YELLOW  "\033[33m"
+#define BLUE    "\033[34m"
+#define CYAN    "\033[36m"
+#define RED     "\033[31m" 
+
 Fixed::Fixed(void) : _fixed(0){
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << GREEN << "Default constructor called" << RESET << std::endl;
 	return ;
 }
 
 Fixed::Fixed(int n){
-	std::cout << "Initialising int constructor called" << std::endl;
+	std::cout << RED << "Int constructor called" << RESET << std::endl;
 	this->_fixed = n << _fract;
-	return ;	
+	return ;
 }
 
 Fixed::Fixed(const float fp){
-	std::cout << "Initialising float constructor called" << std::endl;
-	this->_fixed = roundf(fp * (1 << _fract));
+	std::cout << RED << "Float constructor called" << RESET << std::endl;
+	this->_fixed = roundf(fp * 256);
 	return ;
 }
 
 Fixed::Fixed(const Fixed &inst){
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << YELLOW << "Copy constructor called" << RESET << std::endl;
 	*this = inst;
 	return ;
 }
 
 Fixed::~Fixed(void){
-	std::cout << "Destructor called" << std::endl;
+	std::cout << BLUE << "Destructor called" << RESET << std::endl;
 	return ;
 }
 
 Fixed & Fixed::operator =(Fixed const &inst){
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << CYAN << "Copy assignment operator called" << RESET << std::endl;
 	if (this != &inst){
 		this->_fixed = inst.getRawBits();
 	}
