@@ -6,21 +6,21 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 18:15:39 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/24 18:58:58 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 12:25:34 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm(void) : 
-	AForm("Random Shrubbery Form", 145, 137),
-	_target("Random Target"){
+	AForm("Shrubbery Creation Form", 145, 137),
+	_target("Random Location"){
 	std::cout << GREEN << "Default constructor Shrubbery Creation Form called" << RESET << std::endl;
 	return ;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string name, std::string target) :
-	AForm(name, 145, 137),
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) :
+	AForm("Shrubbery Creation Form", 145, 137),
 	_target(target){
 	std::cout << GREEN << "Parametrised constructor Shrubbery Creation Form called" << RESET << std::endl;
 	return ;
@@ -51,6 +51,7 @@ std::string	ShrubberyCreationForm::getTarget(void) const{
 }
 
 void		ShrubberyCreationForm::execute(Bureaucrat const & executor){
+	this->executeOK(executor);
 	std::string		fileName(this->_target);
 	fileName.append("_shrubbery");
 	std::ofstream	ofs;

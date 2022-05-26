@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:12:09 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/24 18:40:55 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 12:32:03 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(void){
 	std::cout << std::endl;
 	
 	std::cout << BOLD << ">> Initialising a Presidential Pardon Form and executing it:" << RESET << std::endl;
-	PresidentialPardonForm	*pardon = new PresidentialPardonForm("Pardon", "target");
+	PresidentialPardonForm	*pardon = new PresidentialPardonForm("Johnny Depp");
 	std::cout << std::endl << *pardon << std::endl << std::endl;
 	Louise.executeForm(*pardon);
 	Marie.signForm(*pardon);
@@ -40,7 +40,7 @@ int	main(void){
 	std::cout << "___________________________________________________________________________________" << std::endl;
 
 	std::cout << std::endl << BOLD << ">> Initialising a Shrubbery Creation Form and executing it:" << RESET << std::endl;
-	ShrubberyCreationForm	*shrubs = new ShrubberyCreationForm("Shrubs", "target");
+	ShrubberyCreationForm	*shrubs = new ShrubberyCreationForm("home");
 	std::cout << std::endl << *shrubs << std::endl << std::endl;
 	Louise.executeForm(*shrubs);
 	Louise.signForm(*shrubs);
@@ -52,7 +52,7 @@ int	main(void){
 	std::cout << "___________________________________________________________________________________" << std::endl;
 
 	std::cout << std::endl << BOLD << ">> Initialising a Robotomy Request Form and executing it:" << RESET << std::endl;
-	RobotomyRequestForm	*rrrrrr = new RobotomyRequestForm("Rrrrrr", "target");
+	RobotomyRequestForm	*rrrrrr = new RobotomyRequestForm("target");
 	std::cout << std::endl << *rrrrrr << std::endl << std::endl;
 	Eva.executeForm(*rrrrrr);
 	Marie.signForm(*rrrrrr);

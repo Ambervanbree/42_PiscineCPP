@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 15:20:02 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/24 18:21:04 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 11:24:40 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class ShrubberyCreationForm : public AForm{
 
 	public: 
 		ShrubberyCreationForm(void);
-		ShrubberyCreationForm(std::string name, std::string target);
+		ShrubberyCreationForm(std::string target);
 		ShrubberyCreationForm(const ShrubberyCreationForm &inst);
 		ShrubberyCreationForm & operator = (const ShrubberyCreationForm &inst);
 		~ShrubberyCreationForm(void);

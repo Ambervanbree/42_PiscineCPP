@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 17:24:06 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/24 19:00:44 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 12:17:05 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,12 +79,13 @@ int			AForm::getMinExecutingGrade() const{
 }
 
 void		AForm::beSigned(Bureaucrat &bureaucrat){
-	if (this->_signed){
+	if (this->_signed)
 		throw AForm::AlreadySigned();
-	}
+	else if (bureaucrat.getGrade() > this->_minSigningGrade)
+		throw AForm::BureacratGradeTooLowException();
 	else{
 		this->_signed = true;
-		std::cout << "\U00002705 " << bureaucrat.getName() << " signed " << this->_name << std::endl;
+		std::cout << bureaucrat.getName() << " signed " << this->_name << std::endl;
 	}
 }
 
@@ -135,6 +136,3 @@ std::ostream & operator <<(std::ostream &o, AForm const &inst){
 	<< "\nMinimum grade to execute: " << inst.getMinExecutingGrade() << std::endl;
 	return o;
 }
-
-
-// note to self: bureaucrat in exercise before passed as argument should maybe be const? 
