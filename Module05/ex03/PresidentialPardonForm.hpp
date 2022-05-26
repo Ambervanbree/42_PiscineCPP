@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 14:53:42 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/24 16:56:32 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 12:45:07 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class PresidentialPardonForm : public AForm{
 
 	public: 
 		PresidentialPardonForm(void);
-		PresidentialPardonForm(std::string name, std::string target);
+		PresidentialPardonForm(std::string target);
 		PresidentialPardonForm(const PresidentialPardonForm &inst);
 		PresidentialPardonForm & operator = (const PresidentialPardonForm &inst);
 		~PresidentialPardonForm(void);

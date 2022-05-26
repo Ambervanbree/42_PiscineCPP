@@ -1,9 +1,9 @@
 #include "Intern.hpp"
 
 Intern::Intern(void) {
-	this->_forms[0] = "Presidential Pardon";
-	this->_forms[1] = "Shrubbery Creation";
-	this->_forms[2] = "Robotomy Request";
+	this->_forms[0] = "Presidential Pardon Form";
+	this->_forms[1] = "Shrubbery Creation Form";
+	this->_forms[2] = "Robotomy Request Form";
 	this->_formFunctions[0] = & Intern::createPresidentialPardonForm;
 	this->_formFunctions[1] = & Intern::createShrubberyCreationForm;
 	this->_formFunctions[2] = & Intern::createRobotomyRequestForm;
@@ -34,25 +34,25 @@ AForm * Intern::makeForm(std::string formName, std::string formTarget){
 	for (int i = 0; i < 3; i++){
 		if (formName == this->_forms[i]){
 			std::cout << "Intern creates " << formName << std::endl;
-			return (this->*_formFunctions[i])(formName, formTarget);
+			return (this->*_formFunctions[i])(formTarget);
 		}
 	}
 	throw FormDoesNotExist();
 	return NULL;
 }
 
-AForm * Intern::createPresidentialPardonForm(std::string name, std::string target) const{
-	return (new PresidentialPardonForm(name, target));
+AForm * Intern::createPresidentialPardonForm(std::string target) const{
+	return (new PresidentialPardonForm(target));
 }
 
-AForm * Intern::createShrubberyCreationForm(std::string name, std::string target) const{
-		return (new ShrubberyCreationForm(name, target));
+AForm * Intern::createShrubberyCreationForm(std::string target) const{
+		return (new ShrubberyCreationForm(target));
 }
 
-AForm * Intern::createRobotomyRequestForm(std::string name, std::string target) const{
-	return (new RobotomyRequestForm(name, target));
+AForm * Intern::createRobotomyRequestForm(std::string target) const{
+	return (new RobotomyRequestForm(target));
 }
 
 const char* Intern::FormDoesNotExist::what() const throw(){
-	return "Requested form does not exist";
+	return "requested form does not exist";
 }

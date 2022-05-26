@@ -8,10 +8,10 @@
 class Intern{
 	private:
 		std::string	_forms[3];
-		AForm *	(Intern::*_formFunctions[3])(std::string name, std::string target) const;
-		AForm * createPresidentialPardonForm(std::string name, std::string target) const;
-		AForm * createShrubberyCreationForm(std::string name, std::string target) const;
-		AForm * createRobotomyRequestForm(std::string name, std::string target) const;
+		AForm *	(Intern::*_formFunctions[3])(std::string target) const;
+		AForm * createPresidentialPardonForm(std::string target) const;
+		AForm * createShrubberyCreationForm(std::string target) const;
+		AForm * createRobotomyRequestForm(std::string target) const;
 	
 	public:
 		Intern(void);
