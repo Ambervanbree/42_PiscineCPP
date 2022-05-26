@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:04:05 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 17:39:51 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 10:34:18 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 		std::cout << CYAN << "Parametrised constructor Bureaucrat called" << RESET << std::endl;
 		try{
 			if (grade < 1){
-				this->_grade = 1;
+				this->_grade = 150;
 				throw Bureaucrat::GradeTooHighException();
 			}
 			else if (grade > 150){
@@ -61,7 +61,7 @@
 		return this->_name;
 	}
 	
-	int 		Bureaucrat::getGrade(void) const{
+	unsigned int Bureaucrat::getGrade(void) const{
 		return this->_grade;
 	}
 	
@@ -70,7 +70,7 @@
 			if (this->_grade == 1)
 				throw Bureaucrat::GradeTooHighException();
 			else
-				this->_grade++;
+				this->_grade--;
 		}
 		catch(Bureaucrat::GradeTooHighException e){
 			std::cerr << RED << e.what() << RESET << std::endl;
@@ -82,7 +82,7 @@
 			if (this->_grade == 150)
 				throw Bureaucrat::GradeTooLowException();
 			else
-				this->_grade--;
+				this->_grade++;
 		}
 		catch(Bureaucrat::GradeTooLowException e){
 			std::cerr << RED << e.what() << RESET << std::endl;

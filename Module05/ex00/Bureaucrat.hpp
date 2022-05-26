@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:04:02 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/23 15:39:47 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 10:10:55 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 class Bureaucrat{
 	private:
 		std::string const	_name;
-		int					_grade;
+		unsigned int		_grade;
 	
 	public:
 		Bureaucrat(void);
@@ -37,10 +37,10 @@ class Bureaucrat{
 		Bureaucrat & operator =(const Bureaucrat &inst);
 		~Bureaucrat(void);
 
-		std::string getName(void) const;
-		int 		getGrade(void) const;
-		void		incrementGrade(void);
-		void		decrementGrade(void);
+		std::string  getName(void) const;
+		unsigned int getGrade(void) const;
+		void		 incrementGrade(void);
+		void		 decrementGrade(void);
 
 		class	GradeTooLowException : public std::exception{
 			public:
