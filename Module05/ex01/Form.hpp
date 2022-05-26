@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 16:37:33 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/24 15:00:57 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 11:07:45 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class Form{
 		int			getMinExecutingGrade() const;
 		
 		void		beSigned(Bureaucrat &bureaucrat);
-	
+
 		class GradeTooHighException : public std::exception{
 			public:
 				virtual const char* what() const throw();		

@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 11:04:05 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/24 13:04:09 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 11:12:15 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,12 @@
 	Bureaucrat::Bureaucrat(const std::string name, unsigned int grade) :
 	_name(name){
 		std::cout << CYAN << "Parametrised constructor Bureaucrat called" << RESET << std::endl;
-		try{
-			if (grade < 1){
-				this->_grade = 1;
-				throw Bureaucrat::GradeTooHighException();
-			}
-			else if (grade > 150){
-				this->_grade = 150;
-				throw Bureaucrat::GradeTooLowException();
-			}
-			else
-				this->_grade = grade;
-		}
-		catch(std::exception &e){
-			std::cerr << RED << e.what() << RESET << std::endl;
-		}
+		if (grade < 1)
+			throw Bureaucrat::GradeTooHighException();
+		else if (grade > 150)
+			throw Bureaucrat::GradeTooLowException();
+		else
+			this->_grade = grade;
 		return ;
 	}
 	
@@ -66,35 +57,22 @@
 	}
 	
 	void		Bureaucrat::incrementGrade(void){
-		try{
-			if (this->_grade == 1)
-				throw Bureaucrat::GradeTooHighException();
-			else
-				this->_grade++;
-		}
-		catch(Bureaucrat::GradeTooHighException e){
-			std::cerr << RED << e.what() << RESET << std::endl;
-		}
+		if (this->_grade == 1)
+			throw Bureaucrat::GradeTooHighException();
+		else
+			this->_grade--;
 	}
 	
 	void		Bureaucrat::decrementGrade(void){
-		try{
-			if (this->_grade == 150)
-				throw Bureaucrat::GradeTooLowException();
-			else
-				this->_grade--;
-		}
-		catch(Bureaucrat::GradeTooLowException e){
-			std::cerr << RED << e.what() << RESET << std::endl;
-		}		
+		if (this->_grade == 150)
+			throw Bureaucrat::GradeTooLowException();
+		else
+			this->_grade++;	
 	}
-
+	
 	void		Bureaucrat::signForm(Form & form){
 		try {
-			if (this->_grade <= form.getMinSigningGrade())
-				form.beSigned(*this);
-			else
-				throw Form::BureacratGradeTooLowException();
+			form.beSigned(*this);
 		}
 		catch (std::exception & e){
 			std::cerr << RED << this->_name

@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 17:24:06 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/24 15:00:38 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 11:12:32 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,10 @@
 	}
 	
 	void		Form::beSigned(Bureaucrat &bureaucrat){
-		if (this->_signed){
+		if (this->_signed)
 			throw Form::AlreadySigned();
-		}
+		else if (bureaucrat.getGrade() > this->_minSigningGrade)
+			throw Form::BureacratGradeTooLowException();
 		else{
 			this->_signed = true;
 			std::cout << bureaucrat.getName() << " signed " << this->_name << std::endl;

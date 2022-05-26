@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:12:09 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/24 13:12:26 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 11:16:05 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ int	main(void){
 
 	std::cout << BOLD << ">> Creating a correct form and having it signed by the different bureaucrats:" << RESET << std::endl;
 	try{
-		Form	form("Form5", 35, 4);
+		Form	form("D765-243", 35, 4);
+		std::cout << std::endl;
 		std::cout << form << std::endl;
 		Louise.signForm(form);
 		Eva.signForm(form);
