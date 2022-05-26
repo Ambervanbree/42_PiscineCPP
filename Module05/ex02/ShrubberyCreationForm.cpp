@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 18:15:39 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/26 12:25:34 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 14:37:57 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,22 @@
 ShrubberyCreationForm::ShrubberyCreationForm(void) : 
 	AForm("Shrubbery Creation Form", 145, 137),
 	_target("Random Location"){
-	std::cout << GREEN << "Default constructor Shrubbery Creation Form called" << RESET << std::endl;
-	return ;
+		std::cout << GREEN << "Default constructor Shrubbery Creation Form called" << RESET << std::endl;
+		return ;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(std::string target) :
 	AForm("Shrubbery Creation Form", 145, 137),
 	_target(target){
-	std::cout << GREEN << "Parametrised constructor Shrubbery Creation Form called" << RESET << std::endl;
-	return ;
+		std::cout << GREEN << "Parametrised constructor Shrubbery Creation Form called" << RESET << std::endl;
+		return ;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &inst) :
 	AForm(inst.getName(), 145, 137),
 	_target(inst.getTarget()){
-	std::cout << GREEN << "Copy constructor Shrubbery Creation Form called" << RESET << std::endl;
-	return ;
+		std::cout << GREEN << "Copy constructor Shrubbery Creation Form called" << RESET << std::endl;
+		return ;
 }
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator = (const ShrubberyCreationForm &inst){

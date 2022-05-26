@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 15:19:20 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/26 11:24:20 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 14:41:18 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 class RobotomyRequestForm : public AForm{
 	private:
 		std::string	_target;
-		bool		_timeSet;
 
 	public: 
 		RobotomyRequestForm(void);

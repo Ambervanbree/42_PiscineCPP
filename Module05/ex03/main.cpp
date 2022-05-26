@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:12:09 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/26 14:07:12 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 14:40:07 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,12 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "Intern.hpp"
+#include <cstdlib>
+#include <ctime>
 
 int	main(void){
+	srand(time(0));
+	
 	std::cout << "___________________________________________________________________________________" << std::endl;
 	std::cout << std::endl;
 	std::cout << BOLD << "Creating a random intern and a bureaucrat:" << RESET << std::endl << std::endl;
@@ -75,5 +79,5 @@ int	main(void){
 
 	std::cout << "___________________________________________________________________________________" << std::endl;
 	std::cout << std::endl;
-	std::cout << std::endl << BOLD << ">> Deconstructing all objects that are left:" << RESET << std::endl;
+	std::cout << std::endl << BOLD << ">> Deconstructing all objects that are left:" << RESET << std::endl << std::endl;
 }

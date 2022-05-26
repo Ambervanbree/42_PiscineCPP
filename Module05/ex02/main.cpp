@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 12:12:09 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/26 12:32:03 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 14:41:11 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@
 #include <cstdlib>
 
 int	main(void){
+	srand(time(0));
+	
 	std::cout << "___________________________________________________________________________________" << std::endl << std::endl;
-	std::cout << BOLD << ">> Initialising bureaucrats Louise, Eva and Marie:" << RESET << std::endl;
+	std::cout << BOLD << ">> Initialising bureaucrats Louise, Eva and Marie:" << RESET << std::endl << std::endl;
 	Bureaucrat	Louise("Louise", 140), Eva("Eva", 3), Marie("Marie", 25);
 	std::cout << Louise << std::endl;
 	std::cout << Eva << std::endl;
@@ -27,7 +29,7 @@ int	main(void){
 	std::cout << "___________________________________________________________________________________" << std::endl;
 	std::cout << std::endl;
 	
-	std::cout << BOLD << ">> Initialising a Presidential Pardon Form and executing it:" << RESET << std::endl;
+	std::cout << BOLD << ">> Initialising a Presidential Pardon Form and executing it:" << RESET << std::endl << std::endl;
 	PresidentialPardonForm	*pardon = new PresidentialPardonForm("Johnny Depp");
 	std::cout << std::endl << *pardon << std::endl << std::endl;
 	Louise.executeForm(*pardon);
@@ -39,7 +41,7 @@ int	main(void){
 	delete pardon;
 	std::cout << "___________________________________________________________________________________" << std::endl;
 
-	std::cout << std::endl << BOLD << ">> Initialising a Shrubbery Creation Form and executing it:" << RESET << std::endl;
+	std::cout << std::endl << BOLD << ">> Initialising a Shrubbery Creation Form and executing it:" << RESET << std::endl << std::endl;
 	ShrubberyCreationForm	*shrubs = new ShrubberyCreationForm("home");
 	std::cout << std::endl << *shrubs << std::endl << std::endl;
 	Louise.executeForm(*shrubs);
@@ -51,7 +53,7 @@ int	main(void){
 	delete shrubs;
 	std::cout << "___________________________________________________________________________________" << std::endl;
 
-	std::cout << std::endl << BOLD << ">> Initialising a Robotomy Request Form and executing it:" << RESET << std::endl;
+	std::cout << std::endl << BOLD << ">> Initialising a Robotomy Request Form and executing it:" << RESET << std::endl << std::endl;
 	RobotomyRequestForm	*rrrrrr = new RobotomyRequestForm("target");
 	std::cout << std::endl << *rrrrrr << std::endl << std::endl;
 	Eva.executeForm(*rrrrrr);
@@ -63,5 +65,5 @@ int	main(void){
 	delete rrrrrr;
 	std::cout << "___________________________________________________________________________________" << std::endl;
 
-	std::cout << std::endl << BOLD << ">> Deconstructing all objects that are left:" << RESET << std::endl;
+	std::cout << std::endl << BOLD << ">> Deconstructing all objects that are left:" << RESET << std::endl << std::endl;
 }

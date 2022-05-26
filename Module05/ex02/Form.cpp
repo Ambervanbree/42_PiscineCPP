@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/23 17:24:06 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/26 12:17:05 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 14:23:05 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void		AForm::beSigned(Bureaucrat &bureaucrat){
 		throw AForm::BureacratGradeTooLowException();
 	else{
 		this->_signed = true;
-		std::cout << bureaucrat.getName() << " signed " << this->_name << std::endl;
+		std::cout << "\U00002705 "<< bureaucrat.getName() << " signed " << this->_name << std::endl;
 	}
 }
 

@@ -6,13 +6,9 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/24 18:14:13 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/05/26 12:44:37 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/05/26 14:40:16 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "RobotomyRequestForm.hpp"
-#include <cstdlib>
-#include <ctime>
 
 #include "RobotomyRequestForm.hpp"
 #include <cstdlib>
@@ -60,10 +56,6 @@ void		RobotomyRequestForm::execute(Bureaucrat const & executor){
 	this->executeOK(executor);
 	std::cout << "\U00002705 " << executor.getName() << " executed " << this->getName() << std::endl;
 	std::cout << BOLD << "!!!! DDrGGRrrrrggggdddrrrGGrUUUUU !!!!" << RESET << std::endl;
-	if (!this->_timeSet){
-		srand(time(0));
-		this->_timeSet = true;
-	}
 	if (rand() % 2){
 		std::cout << this->_target << " has succesfully been robotomized! \U0001F916 \U0001F916" << std::endl;
 	}
