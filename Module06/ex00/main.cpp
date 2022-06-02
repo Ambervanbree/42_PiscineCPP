@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 14:12:06 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/06/02 13:00:12 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/06/02 17:08:08 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ bool	handleNumeric(char *argument, t_data *data){
 }
 
 bool	handleExceptions(std::string argument, t_data *data){
-	std::cout << "test test" << std::endl;	
 	if (argument == "nanf" || argument == "nan"){
 		data->cString = "impossible";
 		data->nString = "impossible";
