@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 14:12:06 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/06/02 10:24:37 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/06/02 13:00:12 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,15 +49,30 @@ bool	handleNumeric(char *argument, t_data *data){
 }
 
 bool	handleExceptions(std::string argument, t_data *data){
-	if (argument == "nanf" || argument == "+inff" || argument == "-inff"){
-		setFloat(argument.c_str(), data);
+	std::cout << "test test" << std::endl;	
+	if (argument == "nanf" || argument == "nan"){
+		data->cString = "impossible";
+		data->nString = "impossible";
+		data->fString = "nanf";
+		data->dString = "nan";
 		return true ;
 	}
-	if (argument == "nan" || argument == "+inf" || argument == "-inf"){
-		setDouble(argument.c_str(), data);
+	else if (argument == "+inf" || argument == "inf" || argument == "+inff" || argument == "inff"){
+		data->cString = "impossible";
+		data->nString = "impossible";
+		data->fString = "inff";
+		data->dString = "inf";
 		return true ;
 	}
-	return false ;
+	else if (argument == "-inf" || argument == "-inff"){
+		data->cString = "impossible";
+		data->nString = "impossible";
+		data->fString = "-inff";
+		data->dString = "-inf";
+		return true ;
+	}
+	else
+		return false ;
 }
 
 int		main(int argc, char *argv[]){
@@ -70,14 +85,13 @@ int		main(int argc, char *argv[]){
 	std::string	argument = argv[1];
 
 	if (std::strtold(argv[1], NULL) || argument[0] == '0'){
-		if (!handleNumeric(argv[1], &data))
-			setWrongArgument(&data);
+		if (!handleExceptions(argument, &data))
+			if (!handleNumeric(argv[1], &data))
+				setWrongArgument(&data);
 	}
 	else if (argument.size() == 1)
 		setChar(argument[0], &data);
-	else{
-		if (!handleExceptions(argv[1], &data))
-			setWrongArgument(&data);
-	}
+	else
+		setWrongArgument(&data);
 	display(data);
 }
