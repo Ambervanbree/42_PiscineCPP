@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 15:02:21 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/06/01 15:11:48 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/06/01 17:01:28 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <string>
 # include <locale>
 # include <cstdlib>
+# include <limits>
+# include <iomanip>
 
 typedef	struct s_data{
 	char	c;

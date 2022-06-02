@@ -6,7 +6,7 @@
 /*   By: avan-bre <avan-bre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 14:12:06 by avan-bre          #+#    #+#             */
-/*   Updated: 2022/06/01 15:12:55 by avan-bre         ###   ########.fr       */
+/*   Updated: 2022/06/02 10:24:37 by avan-bre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,10 @@ bool	handleNumeric(char *argument, t_data *data){
 	
 	switch (period){
 		case 0:
-			setInt(argument, data);
+			if (fl == 1)
+				setFloat(argument, data);
+			else
+				setInt(argument, data);
 			return true;
 		case 1:
 			if (fl == 1)
@@ -66,7 +69,7 @@ int		main(int argc, char *argv[]){
 	t_data		data;
 	std::string	argument = argv[1];
 
-	if (std::atoi(argv[1]) || argument[0] == '0'){
+	if (std::strtold(argv[1], NULL) || argument[0] == '0'){
 		if (!handleNumeric(argv[1], &data))
 			setWrongArgument(&data);
 	}
