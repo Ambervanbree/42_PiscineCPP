@@ -13,7 +13,7 @@
 NAME	=	iter
 CC		=	c++
 RM		=	rm -rf
-SRCS	=	main.cpp iter.cpp
+SRCS	=	main.cpp
 OBJS	=	$(SRCS:.cpp=.o)
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 INCL	=	.
