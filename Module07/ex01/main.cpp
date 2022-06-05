@@ -8,6 +8,7 @@ void    printItem(T item){
 
 void    addOne(int n){
     n++;
+    std::cout << "n is " << n << std::endl;
     return ;
 }
 
