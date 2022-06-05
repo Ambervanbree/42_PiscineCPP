@@ -1,7 +1,7 @@
 #include "iter.hpp"
 
 template<typename T>
-void    printItem(T n){
+void    printItem(T item){
     std::cout << item << std::endl;
     return ;
 }

@@ -6,7 +6,7 @@
 template <typename T>
 void    iter(T *array, int size, void (*function)(T)){
     for (int i = 0; i < size ; i++){
-        funtion(array[i]);
+        function(array[i]);
     }
 }
 
