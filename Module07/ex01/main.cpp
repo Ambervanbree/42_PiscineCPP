@@ -17,5 +17,5 @@ int     main(void){
     int         array[4] = {1, 2, 3, 4};
     std::string  stringArray[6] = {"yay", "this", "module", "is", "almost", "over"};
     iter(array, 4, printItem);
-    iter(array, 6, spellBackwards);
+    iter(array, 6, spellBackwards<char>);
 }
