@@ -14,8 +14,8 @@ void    spellBackwards(std::string sentence){
 }
 
 int     main(void){
-    int array[4] = {1, 2, 3, 4};
+    int     array[4] = {1, 2, 3, 4};
+    char    charArray[6] = {"yay", "this", "module", "is", "almost", "over"};
     iter(array, 4, printItem);
-    iter(array, 4, addOne);
-    iter(array, 4, printItem);
+    iter(array, 6, spellBackwards);
 }
