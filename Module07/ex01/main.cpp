@@ -6,9 +6,10 @@ void    printItem(T item){
     return ;
 }
 
-void    addOne(int &n){
-    n++;
-    std::cout << "n is " << n << std::endl;
+void    spellBackwards(std::string sentence){
+    for (int i = sentence.size() - 1; i ; i--){
+        std::cout << sentence[i] << std::endl;
+    }
     return ;
 }
 
